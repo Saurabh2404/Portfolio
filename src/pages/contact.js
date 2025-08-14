@@ -41,17 +41,17 @@ export default function Contact() {
           <ContactItem
             icon={<FaEnvelope size={32} className="text-red-500" />}
             label="Email"
-            link="mailto:your.email@example.com"
+            link="rapidsaurabh3104@gmail.com"
           />
           <ContactItem
             icon={<FaGithub size={32} className="text-gray-800" />}
             label="GitHub"
-            link="https://github.com/your_username"
+            link="https://github.com/Saurabh2404"
           />
           <ContactItem
             icon={<FaLinkedin size={32} className="text-blue-700" />}
             label="LinkedIn"
-            link="https://linkedin.com/in/your_username"
+            link="https://www.linkedin.com/in/saurabhkumar2404/"
           />
         </div>
       </main>
