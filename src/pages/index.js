@@ -24,7 +24,7 @@ const projects = [
   },
   {
     title: 'Smart Expense Tracker',
-    description: 'A budget management tool with data visualization and user authentication.',
+    description: 'Smart Expense Tracker is a budget management tool that helps users track and manage their expenses efficiently.It features secure user authentication to protect personal financial data..',
     link: 'https://github.com/your-username/smart-expense-tracker',
   }
 ]
@@ -141,3 +141,4 @@ export default function Home() {
     </div>
   )
 }
+ 
