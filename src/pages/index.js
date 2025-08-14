@@ -18,12 +18,12 @@ const projects = [
   },
   {
     title: 'Tech-Blog',
-    description: 'Track upcoming coding contests from various platforms in one place such as Leetcode, Codeforces etc.',
+    description: 'Tech-Blog is a platform to share and explore technical blogs on topics like programming, AI, and cybersecurity.Users can publish their own articles or read others’ posts.',
     link: 'https://github.com/Saurabh2404/TechBlog',
   },
   {
     title: 'Smart Expense Tracker',
-    description: 'A budget management tool with data visualization and user authentication.',
+    description: 'Smart Expense Tracker is a budget management tool that helps users track and manage their expenses efficiently.It features secure user authentication to protect personal financial data.',
     link: 'https://github.com/your-username/smart-expense-tracker',
   }
 ]
@@ -76,9 +76,12 @@ export default function Home() {
                 Hi, I am <span style={{ color: '#D94D1A' }}>Saurabh Kumar Singh</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-700 max-w-3xl">
-                A backend developer and problem solver passionate about building scalable systems and exploring finance. Skilled in Node.js, Express, MongoDB, and stock trading.
+                I am a backend developer with expertise in building scalable, high-performance applications. 
+                Proficient in Node.js, Express.js, MongoDB, Spring Boot, Core Java, Microservices, WebLogic, and Next.js, 
+                I bring strong problem-solving skills and a deep interest in crafting efficient solutions.
               </p>
             </div>
+
           </div>
         </section>
 

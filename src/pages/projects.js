@@ -18,13 +18,13 @@ const projects = [
   {
     title: 'Tech-Blog',
     description:
-      'Track upcoming coding contests from various platforms in one place such as Leetcode, Codeforces etc.',
+      'Tech-Blog is a platform to share and explore technical blogs on topics like programming, AI, and cybersecurity. Users can publish their own articles or read others’ posts.',
     link: 'https://github.com/Saurabh2404/TechBlog',
   },
   {
     title: 'Smart Expense Tracker',
     description:
-      'A budget management tool with data visualization and user authentication.',
+      'Smart Expense Tracker is a budget management tool that helps users track and manage their expenses efficiently.It features secure user authentication to protect personal financial data.',
     link: 'https://github.com/your-username/smart-expense-tracker',
   },
 ]

@@ -2,7 +2,7 @@ import Footer from '../components/Footer'
 import Navbar from '../components/navbar'
 import Image from 'next/image'
 import { FaHtml5, FaCss3Alt, FaJs, FaJava, FaPython, FaDatabase } from 'react-icons/fa'
-import { SiTailwindcss, SiCplusplus, SiLeetcode, SiCodeforces, SiCodechef, SiMongodb, SiExpress, SiPostman } from 'react-icons/si'
+import { SiTailwindcss, SiCplusplus, SiLeetcode, SiCodeforces, SiCodechef, SiMongodb, SiExpress, SiPostman, SiHackerrank } from 'react-icons/si'
 
 export default function About() {
   const skills = [
@@ -26,6 +26,7 @@ export default function About() {
     { name: 'LeetCode', icon: <SiLeetcode size={32} className="text-yellow-500" />, link: 'https://leetcode.com/u/rapidsaurabh2404/' },
     { name: 'Codeforces', icon: <SiCodeforces size={32} className="text-blue-600" />, link: 'https://codeforces.com/profile/RapidSaurabh' },
     { name: 'CodeChef', icon: <SiCodechef size={32} className="text-purple-600" />, link: 'https://www.codechef.com/users/saurabh2196991' },
+    { name: 'HackerRank', icon: <SiHackerrank size={32} className="text-green-600" />, link: 'https://www.hackerrank.com/profile/saurabh2196991' },
   ]
 
   return (
