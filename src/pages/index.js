@@ -1,9 +1,10 @@
+import { useState, useEffect } from 'react'
 import Footer from '../components/Footer'
-import ProjectCard from '../components/ProjectCard'
 import Navbar from '../components/navbar'
-import Image from 'next/image'
+import ProjectCard from '../components/ProjectCard'
 import { FaHtml5, FaCss3Alt, FaJs, FaJava, FaPython, FaDatabase } from 'react-icons/fa'
 import { SiTailwindcss, SiCplusplus, SiLeetcode, SiMongodb, SiExpress, SiPostman } from 'react-icons/si'
+import Image from 'next/image'
 
 const projects = [
   {
@@ -23,7 +24,7 @@ const projects = [
   },
   {
     title: 'Smart Expense Tracker',
-    description: 'Smart Expense Tracker is a budget management tool that helps users track and manage their expenses efficiently.It features secure user authentication to protect personal financial data.',
+    description: 'A budget management tool with data visualization and user authentication.',
     link: 'https://github.com/your-username/smart-expense-tracker',
   }
 ]
@@ -45,11 +46,25 @@ const skills = [
 ]
 
 export default function Home() {
+  const fullText = "Hi, I am Saurabh Kumar Singh"
+  const [text, setText] = useState("")
+  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    if (index < fullText.length) {
+      const timeout = setTimeout(() => {
+        setText((prev) => prev + fullText.charAt(index))
+        setIndex(index + 1)
+      }, 100)
+      return () => clearTimeout(timeout)
+    }
+  }, [index])
+
   return (
     <div
       className="min-h-screen flex flex-col bg-gradient-to-b from-yellow-100 via-white to-yellow-50 relative"
       style={{
-        backgroundImage: "url('/tech-bg.png')", // Add your image in /public folder
+        backgroundImage: "url('/tech-bg.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
@@ -73,15 +88,18 @@ export default function Home() {
             </div>
             <div className="text-center md:text-left">
               <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
-                Hi, I am <span style={{ color: '#D94D1A' }}>Saurabh Kumar Singh</span>
+                {text.includes("Saurabh Kumar Singh") ? (
+                  <>
+                    Hi, I am <span style={{ color: '#D94D1A' }}>Saurabh Kumar Singh</span>
+                  </>
+                ) : (
+                  text
+                )}
               </h1>
               <p className="text-lg md:text-xl text-gray-700 max-w-3xl">
-                I am a backend developer with expertise in building scalable, high-performance applications. 
-                Proficient in Node.js, Express.js, MongoDB, Spring Boot, Core Java, Microservices, WebLogic, and Next.js, 
-                I bring strong problem-solving skills and a deep interest in crafting efficient solutions.
+                A backend developer and problem solver passionate about building scalable systems and exploring finance. Skilled in Node.js, Express, MongoDB, Spring Boot, Core Java, Microservices, WebLogic, Next.js, and stock trading.
               </p>
             </div>
-
           </div>
         </section>
 
@@ -92,10 +110,12 @@ export default function Home() {
               My Projects
             </h2>
           </div>
-          <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2">
+          <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 auto-rows-fr">
             {projects.map(({ title, description, link }) => (
-              <div key={title} className="transform transition-transform duration-300 hover:scale-[1.02]">
-                <ProjectCard title={title} description={description} link={link} />
+              <div key={title} className="flex">
+                <div className="flex-grow transform transition-transform duration-300 hover:scale-[1.02]">
+                  <ProjectCard title={title} description={description} link={link} />
+                </div>
               </div>
             ))}
           </div>
