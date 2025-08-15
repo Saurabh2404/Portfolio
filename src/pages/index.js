@@ -19,12 +19,12 @@ const projects = [
   },
   {
     title: 'Tech-Blog',
-    description: 'Tech-Blog is a platform to share and explore technical blogs on topics like programming, AI, and cybersecurity.Users can publish their own articles or read others’ posts.',
+    description: 'Tech-Blog is a platform to share and explore technical blogs on topics like programming, AI, and cybersecurity. Users can publish their own articles or read others’ posts.',
     link: 'https://github.com/Saurabh2404/TechBlog',
   },
   {
     title: 'Smart Expense Tracker',
-    description: 'Smart Expense Tracker is a budget management tool that helps users track and manage their expenses efficiently.It features secure user authentication to protect personal financial data..',
+    description: 'Smart Expense Tracker is a budget management tool that helps users track and manage their expenses efficiently. It features secure user authentication to protect personal financial data.',
     link: 'https://github.com/your-username/smart-expense-tracker',
   }
 ]
@@ -61,8 +61,10 @@ export default function Home() {
   }, [index])
 
   return (
+  <div className="bg-white dark:bg-black">
+
     <div
-      className="min-h-screen flex flex-col bg-gradient-to-b from-yellow-100 via-white to-yellow-50 relative"
+      className="min-h-screen flex flex-col bg-gradient-to-b from-yellow-100 via-white to-yellow-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative"
       style={{
         backgroundImage: "url('/tech-bg.png')",
         backgroundSize: 'cover',
@@ -75,7 +77,7 @@ export default function Home() {
       <main className="flex-grow container mx-auto px-6 py-12 relative z-10">
         
         {/* Intro Section */}
-        <section className="bg-white rounded-xl shadow-md p-8 mb-12 bg-opacity-90">
+        <section className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-8 mb-12 bg-opacity-90 dark:bg-opacity-90">
           <div className="flex flex-col md:flex-row items-center md:items-start">
             <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-6 md:mb-0 md:mr-8">
               <Image
@@ -87,7 +89,7 @@ export default function Home() {
               />
             </div>
             <div className="text-center md:text-left">
-              <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+              <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">
                 {text.includes("Saurabh Kumar Singh") ? (
                   <>
                     Hi, I am <span style={{ color: '#D94D1A' }}>Saurabh Kumar Singh</span>
@@ -96,7 +98,7 @@ export default function Home() {
                   text
                 )}
               </h1>
-              <p className="text-lg md:text-xl text-gray-700 max-w-3xl">
+              <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-3xl">
                 A backend developer and problem solver passionate about building scalable systems and exploring finance. Skilled in Node.js, Express, MongoDB, Spring Boot, Core Java, Microservices, WebLogic, Next.js, and stock trading.
               </p>
             </div>
@@ -106,7 +108,7 @@ export default function Home() {
         {/* Projects Section */}
         <section>
           <div className="flex justify-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-800 bg-orange-500 px-8 py-4 rounded-full shadow-md">
+            <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-900 bg-orange-500 dark:bg-yellow-400 px-8 py-4 rounded-full shadow-md">
               My Projects
             </h2>
           </div>
@@ -114,7 +116,12 @@ export default function Home() {
             {projects.map(({ title, description, link }) => (
               <div key={title} className="flex">
                 <div className="flex-grow transform transition-transform duration-300 hover:scale-[1.02]">
-                  <ProjectCard title={title} description={description} link={link} />
+                  <ProjectCard
+                    title={title}
+                    description={description}
+                    link={link}
+                    className="h-full bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 rounded-xl shadow-md"
+                  />
                 </div>
               </div>
             ))}
@@ -122,16 +129,16 @@ export default function Home() {
         </section>
 
         {/* Skills Section */}
-        <section className="bg-white rounded-xl shadow-md p-8 mt-12 bg-opacity-90">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">My Skills</h2>
+        <section className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-8 mt-12 bg-opacity-90 dark:bg-opacity-90">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center">My Skills</h2>
           <div className="flex flex-wrap gap-6 justify-center">
             {skills.map((skill) => (
               <div
                 key={skill.name}
-                className="flex flex-col items-center bg-orange-50 border border-orange-200 rounded-lg p-4 w-32 h-32 shadow-md hover:shadow-lg transform hover:-translate-y-2 transition-all duration-300"
+                className="flex flex-col items-center bg-orange-50 dark:bg-gray-700 border border-orange-200 dark:border-orange-200 rounded-lg p-4 w-32 h-32 shadow-md hover:shadow-lg transform hover:-translate-y-2 transition-all duration-300"
               >
                 {skill.icon}
-                <span className="mt-3 text-lg font-medium text-gray-800">{skill.name}</span>
+                <span className="mt-3 text-lg font-medium text-gray-800 dark:text-gray-200">{skill.name}</span>
               </div>
             ))}
           </div>
@@ -139,6 +146,6 @@ export default function Home() {
       </main>
       <Footer />
     </div>
+  </div>
   )
 }
- 

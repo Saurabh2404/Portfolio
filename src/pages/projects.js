@@ -7,7 +7,7 @@ const projects = [
     title: 'Algo-Engine using Word Embedding Techniques',
     description:
       'A smart platform that aggregates and searches coding problems using contextual word embedding (BERT + TF-IDF).',
-    link: 'https://github.com/Saurabh2404/ProblemSearcher', // <-- GitHub Link
+    link: 'https://github.com/Saurabh2404/ProblemSearcher',
   },
   {
     title: 'Job Application Portal',
@@ -24,19 +24,19 @@ const projects = [
   {
     title: 'Smart Expense Tracker',
     description:
-      'Smart Expense Tracker is a budget management tool that helps users track and manage their expenses efficiently.It features secure user authentication to protect personal financial data.',
+      'Smart Expense Tracker is a budget management tool that helps users track and manage their expenses efficiently. It features secure user authentication to protect personal financial data.',
     link: 'https://github.com/your-username/smart-expense-tracker',
   },
 ]
 
 export default function Projects() {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-yellow-100 via-white to-yellow-50">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-yellow-100 via-white to-yellow-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <Navbar />
       <main className="flex-grow container mx-auto px-6 py-12">
         {/* Heading */}
         <div className="flex justify-center mb-10">
-          <h1 className="text-3xl font-bold text-white bg-orange-500 px-8 py-4 rounded-full shadow-md">
+          <h1 className="text-3xl font-bold text-white dark:text-gray-900 bg-orange-500 dark:bg-yellow-400 px-8 py-4 rounded-full shadow-md">
             My Projects
           </h1>
         </div>
@@ -52,6 +52,7 @@ export default function Projects() {
                 title={title}
                 description={description}
                 link={link}
+                className="h-full bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 rounded-xl shadow-md"
               />
             </div>
           ))}
