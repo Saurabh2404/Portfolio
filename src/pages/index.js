@@ -64,7 +64,7 @@ export default function Home() {
   }, [typedText]);
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-white">
+    <div className="min-h-screen overflow-x-hidden bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-white">
       <Navbar />
 
       <main>
@@ -74,7 +74,13 @@ export default function Home() {
           <div className="absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-orange-500/20 blur-3xl" />
           <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl" />
 
-          <div className="relative mx-auto grid max-w-[96rem] gap-10 px-4 py-10 sm:px-6 sm:py-14 lg:grid-cols-[minmax(0,1fr)_minmax(440px,0.86fr)] lg:items-start lg:gap-16 lg:px-8 lg:py-16 xl:grid-cols-[minmax(760px,820px)_minmax(500px,560px)] xl:gap-24 2xl:max-w-[100rem]">
+          <div className="relative mx-auto grid max-w-[96rem] gap-10 px-4 py-10 
+            sm:px-6 sm:py-14 
+            lg:grid-cols-2 lg:items-start lg:gap-16 lg:px-8 lg:py-16 
+            xl:grid-cols-[1.2fr_1fr] 
+            2xl:max-w-[100rem]">
+
+            {/* LEFT */}
             <div className="min-w-0">
               <div className="inline-flex max-w-full flex-wrap items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-2 text-xs font-semibold text-emerald-200 shadow-[0_0_28px_rgba(16,185,129,0.14)] sm:px-4 sm:text-sm">
                 <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_18px_rgba(52,211,153,0.9)]" />
@@ -82,12 +88,13 @@ export default function Home() {
               </div>
 
               <h1 className="mt-6 max-w-[820px] text-[2.85rem] font-black leading-[1.02] sm:text-6xl lg:mt-7 lg:text-[3.35rem] xl:text-[4rem] 2xl:text-[4.25rem]">
-                <span className="block min-h-[1.05em] break-words text-orange-300 sm:whitespace-nowrap">
+                <span className="block min-h-[1.05em] break-words text-orange-300">
                   {typedText}
                   <span className="ml-1 inline-block h-[0.82em] w-1 translate-y-1 bg-orange-300" />
                 </span>
                 building real-world products.
               </h1>
+
               <p className="mt-5 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
                 Hi, I am{" "}
                 <span className="font-bold text-orange-300">
@@ -132,7 +139,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid w-full min-w-0 gap-4 justify-self-end lg:max-w-[560px] xl:translate-x-10 2xl:translate-x-14">
+            {/* RIGHT */}
+            <div className="grid w-full min-w-0 max-w-full gap-4 lg:max-w-[560px]">
               <div className="glow-border scanline rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-3 shadow-2xl shadow-black/40 backdrop-blur sm:rounded-[1.75rem] sm:p-4">
                 <div className="flex items-center justify-between border-b border-white/10 pb-4">
                   <div className="flex items-center gap-2">
@@ -149,7 +157,7 @@ export default function Home() {
                   {terminalLines.map((line) => (
                     <div
                       key={line}
-                      className="flex items-center gap-3 rounded-xl border border-white/10 bg-slate-950/70 px-3 py-3 font-mono text-xs text-slate-200 sm:px-4 sm:text-sm"
+                      className="flex items-center gap-3 rounded-xl border border-white/10 bg-slate-950/70 px-3 py-3 font-mono text-xs text-slate-200 sm:px-4 sm:text-sm break-all"
                     >
                       <span className="text-emerald-300">&gt;</span>
                       {line}
