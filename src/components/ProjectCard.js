@@ -1,9 +1,14 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
 export default function ProjectCard({ title, description, link, tags = [], accent }) {
   return (
-    <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-orange-200 hover:shadow-xl hover:shadow-slate-200/70 dark:border-white/10 dark:bg-white/[0.04] dark:hover:border-orange-300/60 dark:hover:shadow-black/30">
+    <motion.article
+      whileHover={{ y: -8, scale: 1.015 }}
+      transition={{ type: "spring", stiffness: 300, damping: 22 }}
+      className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:border-orange-200 hover:shadow-xl hover:shadow-slate-200/70 dark:border-white/10 dark:bg-white/[0.04] dark:hover:border-orange-300/60 dark:hover:shadow-black/30"
+    >
       <div
         className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${
           accent || "from-orange-500 to-amber-400"
@@ -36,6 +41,6 @@ export default function ProjectCard({ title, description, link, tags = [], accen
       >
         View repository <ArrowUpRight size={16} />
       </Link>
-    </article>
+    </motion.article>
   );
 }

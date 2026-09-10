@@ -1,0 +1,4 @@
+Design reference: https://zainabkabira.com/
+The sky shader, grain, sun, cloud, and sky-band decorative artwork were
+retrieved from that site's public /assets/ directory as requested.
+Portfolio content and project links belong to Saurabh Kumar Singh.

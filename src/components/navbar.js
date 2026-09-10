@@ -1,118 +1,15 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { Menu, Moon, Sun, X } from "lucide-react";
-
-const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/projects", label: "Projects" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-];
-
+import { MapPin, Mail, Menu, Moon, Sun, X } from "lucide-react";
 export default function Navbar() {
   const router = useRouter();
-  const [darkMode, setDarkMode] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const shouldUseDark = savedTheme ? savedTheme === "dark" : prefersDark;
-
-    document.documentElement.classList.toggle("dark", shouldUseDark);
-    setDarkMode(shouldUseDark);
-  }, []);
-
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [router.pathname]);
-
-  const toggleDarkMode = () => {
-    const nextMode = !darkMode;
-    document.documentElement.classList.toggle("dark", nextMode);
-    localStorage.setItem("theme", nextMode ? "dark" : "light");
-    setDarkMode(nextMode);
-  };
-
-  return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/80">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className="group flex items-center gap-3">
-          <span className="grid h-10 w-10 place-items-center rounded-xl bg-slate-950 text-sm font-black text-white shadow-sm dark:bg-white dark:text-slate-950">
-            SK
-          </span>
-          <span>
-            <span className="block text-sm font-semibold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
-              Portfolio
-            </span>
-            <span className="block text-lg font-bold text-slate-950 dark:text-white">
-              Saurabh Kumar
-            </span>
-          </span>
-        </Link>
-
-        <nav className="hidden items-center gap-2 md:flex">
-          {navItems.map((item) => (
-            <NavLink
-              key={item.href}
-              {...item}
-              active={router.pathname === item.href}
-            />
-          ))}
-        </nav>
-
-        <div className="flex items-center gap-2">
-          <button
-            type="button"
-            onClick={toggleDarkMode}
-            aria-label="Toggle dark mode"
-            className="grid h-10 w-10 place-items-center rounded-xl border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-orange-300 hover:text-orange-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-200 dark:hover:border-orange-300"
-          >
-            {darkMode ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
-          <button
-            type="button"
-            onClick={() => setMenuOpen((open) => !open)}
-            aria-label="Open navigation menu"
-            className="grid h-10 w-10 place-items-center rounded-xl border border-slate-200 bg-white text-slate-700 shadow-sm md:hidden dark:border-white/10 dark:bg-white/5 dark:text-slate-200"
-          >
-            {menuOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
-        </div>
-      </div>
-
-      {menuOpen && (
-        <nav className="border-t border-slate-200 bg-white px-5 py-4 shadow-lg md:hidden dark:border-white/10 dark:bg-slate-950">
-          <div className="mx-auto grid max-w-7xl gap-2">
-            {navItems.map((item) => (
-              <NavLink
-                key={item.href}
-                {...item}
-                active={router.pathname === item.href}
-                mobile
-              />
-            ))}
-          </div>
-        </nav>
-      )}
-    </header>
-  );
-}
-
-function NavLink({ href, label, active, mobile = false }) {
-  return (
-    <Link
-      href={href}
-      className={[
-        "rounded-xl px-4 py-2 text-sm font-semibold transition",
-        mobile ? "block" : "inline-flex",
-        active
-          ? "bg-orange-500 text-white shadow-sm shadow-orange-500/25"
-          : "text-slate-600 hover:bg-slate-100 hover:text-slate-950 dark:text-slate-300 dark:hover:bg-white/10 dark:hover:text-white",
-      ].join(" ")}
-    >
-      {label}
-    </Link>
-  );
+  const [dark, setDark] = useState(false);
+  const [open, setOpen] = useState(false);
+  useEffect(() => { const value = localStorage.getItem("theme") === "dark"; setDark(value); document.documentElement.classList.toggle("dark", value); }, []);
+  useEffect(() => { setOpen(false); }, [router.asPath]);
+  useEffect(() => { const close = event => { if (event.key === "Escape") setOpen(false); }; window.addEventListener("keydown", close); return () => window.removeEventListener("keydown", close); }, []);
+  const toggle = () => { const value = !dark; setDark(value); document.documentElement.classList.toggle("dark", value); localStorage.setItem("theme", value ? "dark" : "light"); };
+  return <header className={`site-nav ${router.pathname === "/" ? "over-sky" : ""}`}><span className="nav-location"><MapPin size={20} /> PUNE, INDIA</span><nav className="nav-pill" aria-label="Main navigation"><Link href="/" aria-label="Saurabh Kumar home"><Image src="/saurabh.jpg" width={38} height={38} alt="Saurabh Kumar" className="nav-avatar" /></Link><div className="desktop-links"><Link href="/#work">Work</Link><Link href="/about" aria-current={router.pathname === "/about" ? "page" : undefined}>About</Link><Link href="/projects" aria-current={router.pathname === "/projects" ? "page" : undefined}>Projects</Link><Link className="nav-contact" href="/contact"><Mail size={18} />Let&apos;s connect</Link></div></nav><div className="nav-actions"><button onClick={toggle} aria-label={dark ? "Switch to light mode" : "Switch to dark mode"} title={dark ? "Light mode" : "Dark mode"}>{dark ? <Moon size={20} /> : <Sun size={20} />}</button><button className="menu-toggle" aria-label="Toggle navigation" aria-expanded={open} aria-controls="mobile-nav" onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</button></div>{open && <nav id="mobile-nav" className="mobile-nav" aria-label="Mobile navigation">{[["/#work", "Work"], ["/about", "About"], ["/projects", "Projects"], ["/contact", "Let's connect"]].map(([href, label], index) => <Link onClick={() => setOpen(false)} key={href} href={href}><small>0{index + 1}</small>{label}</Link>)}</nav>}</header>;
 }

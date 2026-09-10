@@ -3,9 +3,11 @@ import {
   BriefcaseBusiness,
   Bug,
   Code2,
+  Cpu,
   Database,
   Github,
   GraduationCap,
+  Layers3,
   Linkedin,
   Mail,
   MapPin,
@@ -15,79 +17,86 @@ import {
   Rocket,
   Server,
   ShieldCheck,
-  Terminal,
+  Sparkles,
   TrendingUp,
   Workflow,
 } from "lucide-react";
 import {
-  FaNodeJs,
-  FaReact,
+  FaGitAlt,
   FaJava,
   FaJs,
+  FaLinux,
+  FaNodeJs,
   FaPython,
+  FaReact,
 } from "react-icons/fa";
 import {
+  SiApachekafka,
   SiCodechef,
   SiCodeforces,
   SiCplusplus,
+  SiDocker,
   SiExpress,
   SiHackerrank,
   SiJfrog,
+  SiKubernetes,
   SiLeetcode,
   SiMongodb,
+  SiOracle,
   SiPostman,
+  SiRedis,
 } from "react-icons/si";
 
 export const profile = {
   name: "Saurabh Kumar",
   fullName: "Saurabh Kumar Singh",
   role: "Software Engineer",
-  headline: "Full Stack Developer | MERN, APIs, Payments, Spring Boot",
+  headline: "Backend-Focused Full Stack Developer | Java, Spring Boot, MERN, Microservices",
   location: "Pune, India",
-  email: "saurabh2196991@gmail.com",
+  email: "rapidsaurabh3104@gmail.com",
   phone: "+916205809317",
   whatsapp: "6205809317",
   tagline:
-    "I build full-stack web apps, APIs, dashboards, and real-life business tools with clean frontend experiences and reliable server-side logic.",
+    "I build scalable backend systems and full-stack web apps, from distributed microservices and payment workflows to clean, responsive frontend experiences.",
   summary:
-    "Full stack developer and software engineer with hands-on knowledge of MongoDB, Node.js, Express, React, JavaScript, Python, Java, Spring Boot, microservices, API testing, SOAP APIs, UPI flows, transactions, payments, and machine learning based search systems. I have worked on multiple real-time projects, including job portals, blogs, expense tracking, and coding problem search.",
+    "Software engineer with hands-on experience building scalable microservices and payment systems using Java, Spring Boot, and Oracle DB, alongside a full-stack foundation in MongoDB, Node.js, Express, React, and Python. Comfortable across UPI systems, REST and SOAP APIs, distributed architectures, backend testing, and system design, with additional exposure to Docker, Kubernetes, Kafka, and Redis. I have shipped production backend modules processing tens of thousands of transactions per second, alongside side projects spanning search engines, job portals, and expense tracking tools.",
   education:
     "Bachelor of Engineering in Information Technology from Army Institute of Technology, Pune with CGPA 8.11.",
 };
 
 export const highlights = [
   {
-    label: "Current Work",
-    value: "Real-life web apps",
+    label: "Current Focus",
+    value: "Backend & Microservices",
     icon: Server,
   },
   {
     label: "Primary Stack",
-    value: "MERN + APIs",
+    value: "Java, Spring Boot, MERN",
     icon: Code2,
   },
   {
     label: "Domain",
-    value: "Development + Payments + UPI",
+    value: "Payments, UPI, Distributed Systems",
     icon: TrendingUp,
   },
 ];
 
 export const projects = [
   {
-    title: "Coding Problem Search Engine using TF-IDF",
+    title: "Coding Problem Search Engine (TF-IDF + BERT)",
     description:
-      "A search engine that ranks coding problems by textual relevance using Term Frequency-Inverse Document Frequency.",
+      "A semantic search engine that ranks coding problems using TF-IDF, BERT embeddings, and contextual similarity. Indexes 10K+ problems across LeetCode, Codeforces, CodeChef, and HackerRank, improving search relevancy by 48% over keyword-only ranking.",
     link: "https://github.com/Saurabh2404/ProblemSearcher",
-    tags: ["TF-IDF", "Search", "Ranking", "DSA"],
+    tags: ["TF-IDF", "BERT", "Semantic Search", "NLP"],
     accent: "from-orange-500 to-amber-400",
   },
   {
-    title: "Job Application Portal",
+    title: "Job Portal Application",
     description:
-      "A full-stack hiring portal with authentication, job posting workflows, applicant management, and admin controls.",
+      "A backend service for a two-role (recruiter and candidate) job portal built with Node.js and Express, following an MVC architecture with 10+ RESTful endpoints for job postings and applications, plus middleware for request validation.",
     link: "https://github.com/Saurabh2404/Job-Application-Portal",
-    tags: ["Node.js", "Express", "Auth", "Admin"],
+    tags: ["Node.js", "Express", "MVC", "REST APIs"],
     accent: "from-blue-500 to-cyan-400",
   },
   {
@@ -109,54 +118,91 @@ export const projects = [
 ];
 
 export const skills = [
+  { name: "Java", icon: FaJava, color: "text-red-500" },
+  { name: "Spring Boot", icon: Server, color: "text-green-600" },
+  { name: "Microservices", icon: Workflow, color: "text-sky-500" },
+  { name: "Eureka Server", icon: ShieldCheck, color: "text-indigo-500" },
+  { name: "System Design", icon: Layers3, color: "text-purple-500" },
   { name: "MongoDB", icon: SiMongodb, color: "text-green-500" },
   { name: "Express.js", icon: SiExpress, color: "text-gray-800 dark:text-gray-100" },
   { name: "React", icon: FaReact, color: "text-cyan-500" },
   { name: "Node.js", icon: FaNodeJs, color: "text-green-600" },
   { name: "JavaScript", icon: FaJs, color: "text-yellow-400" },
   { name: "REST APIs", icon: NetworkIcon, color: "text-sky-500" },
-  { name: "Full Stack Apps", icon: Workflow, color: "text-orange-500" },
-  { name: "Python", icon: FaPython, color: "text-blue-400" },
-  { name: "Machine Learning", icon: Code2, color: "text-violet-500" },
-  { name: "Java", icon: FaJava, color: "text-red-500" },
-  { name: "Spring Boot", icon: Server, color: "text-green-600" },
-  { name: "Microservices", icon: Workflow, color: "text-sky-500" },
-  { name: "Eureka Server", icon: ShieldCheck, color: "text-indigo-500" },
-  { name: "SQL", icon: Database, color: "text-emerald-500" },
   { name: "SOAP APIs", icon: NetworkIcon, color: "text-cyan-600" },
+  { name: "Python", icon: FaPython, color: "text-blue-400" },
+  { name: "C++", icon: SiCplusplus, color: "text-blue-600" },
+  { name: "SQL", icon: Database, color: "text-emerald-500" },
+  { name: "Oracle DB", icon: SiOracle, color: "text-red-600" },
+  { name: "Redis", icon: SiRedis, color: "text-red-500" },
+  { name: "Kafka", icon: SiApachekafka, color: "text-slate-700 dark:text-slate-200" },
+  { name: "Docker", icon: SiDocker, color: "text-sky-500" },
+  { name: "Kubernetes", icon: SiKubernetes, color: "text-blue-600" },
   { name: "UPI & Payments", icon: ShieldCheck, color: "text-emerald-500" },
   { name: "Postman", icon: SiPostman, color: "text-orange-400" },
   { name: "API Testing", icon: Bug, color: "text-rose-500" },
+  { name: "Git", icon: FaGitAlt, color: "text-orange-500" },
+  { name: "Linux", icon: FaLinux, color: "text-slate-700 dark:text-slate-200" },
+  { name: "AI-native Development", icon: Sparkles, color: "text-fuchsia-500" },
   { name: "JFrog", icon: SiJfrog, color: "text-lime-500" },
-  { name: "NetBeans", icon: Code2, color: "text-blue-500" },
-  { name: "C++", icon: SiCplusplus, color: "text-blue-600" },
   { name: "Problem Solving", icon: SiLeetcode, color: "text-yellow-500" },
 ];
 
-export const experience = [
+// Alternating work + education timeline, rendered by <Timeline />
+export const timeline = [
   {
-    title: "Full Stack Development",
-    text:
-      "Building real-life web applications with React, Node.js, Express, MongoDB, authentication flows, dashboards, CRUD systems, and clean UI experiences.",
+    type: "work",
+    title: "Associate Consultant",
+    org: "Oracle Financial Services Software Limited",
+    duration: "July 2025 – Present",
+    location: "Pune, Maharashtra",
     icon: BriefcaseBusiness,
+    points: [
+      "Contribute to backend modules across UPI payment workflows on a large-scale banking platform serving millions of daily transactions, improving reliability and reducing production incidents.",
+      "Designed and built 5+ backend microservices from scratch using Java and Spring Boot, supporting transaction processing at 20K–30K TPS with Eureka Server for service discovery.",
+      "Performed API validation and backend testing across 50+ endpoints using Postman, cutting manual regression testing time by an estimated 30% through an internal automation framework.",
+      "Integrated and maintained enterprise technologies including Oracle DB, Flexcube, and WebLogic Server, resolving 20+ production and backend defects across deployment cycles.",
+    ],
   },
   {
-    title: "Real-World Problem Solving",
-    text:
-      "Turning practical requirements into working products such as job portals, technical blogs, expense trackers, and search tools for programmers.",
-    icon: Workflow,
+    type: "education",
+    title: "B.E. in Information Technology",
+    org: "Army Institute of Technology, Pune",
+    duration: "Oct 2021 – July 2025",
+    location: "Pune, Maharashtra",
+    icon: GraduationCap,
+    points: [
+      "Graduated with a CGPA of 8.11, with a strong foundation in Data Structures, Algorithms, DBMS, Operating Systems, and Computer Networks.",
+      "Built a strong competitive programming track record, including a Codeforces Specialist rating and multiple contest wins.",
+      "Applied coursework to real projects spanning search systems, job portals, and full-stack web applications.",
+    ],
   },
+];
+
+export const capabilities = [
   {
-    title: "Backend and Microservices",
+    title: "Backend & Microservices at Scale",
     text:
-      "Hands-on experience with Java, Spring Boot, microservices, Eureka Server, REST APIs, SOAP APIs, payment flows, transaction systems, and service validation.",
+      "Designing and building Java / Spring Boot microservices for high-throughput transaction processing (20K–30K TPS) with Eureka Server for service discovery in distributed architectures.",
     icon: Server,
   },
   {
-    title: "API Validation",
+    title: "Payments & UPI Systems",
     text:
-      "Performing API testing with Postman and supporting automated testing workflows with an internal Java-based automation tool.",
+      "Hands-on experience with UPI payment workflows, transaction reliability, and backend modules powering a large-scale banking platform.",
     icon: ShieldCheck,
+  },
+  {
+    title: "API Validation & Testing",
+    text:
+      "Validating and testing REST/SOAP endpoints with Postman and internal automation frameworks, cutting manual regression effort significantly.",
+    icon: Bug,
+  },
+  {
+    title: "Full Stack Development",
+    text:
+      "Building complete web applications with React, Node.js, Express, MongoDB, authentication flows, dashboards, and clean UI experiences.",
+    icon: Workflow,
   },
   {
     title: "Competitive Programming",
@@ -173,37 +219,37 @@ export const experience = [
 
 export const currentWork = [
   {
-    title: "MERN stack applications",
+    title: "Backend microservices at scale",
     description:
-      "Building project-ready applications with MongoDB, Express, React, Node.js, authentication, APIs, admin panels, and responsive UI.",
-    icon: Workflow,
-  },
-  {
-    title: "Payment and transaction knowledge",
-    description:
-      "Hands-on understanding of UPI flows, transactions, payment modules, validations, and backend reliability requirements.",
-    icon: ShieldCheck,
-  },
-  {
-    title: "Backend services and APIs",
-    description:
-      "Working with REST APIs, SOAP APIs, Java, Spring Boot, microservices, Eureka Server, SQL, Postman, and service integration.",
+      "Building Java and Spring Boot microservices for UPI transaction workflows, handling 20K–30K TPS with Eureka Server-based service discovery.",
     icon: Server,
   },
   {
-    title: "ML and search systems",
+    title: "Payment & UPI reliability",
     description:
-      "Built a coding problem search engine using TF-IDF, relevance ranking, and datasets from popular coding platforms.",
+      "Working on backend modules for a large-scale banking platform, reducing production incidents across transaction workflows.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "API validation & automation",
+    description:
+      "Testing and validating 50+ REST/SOAP endpoints with Postman, backed by an internal Java-based automation framework.",
+    icon: Bug,
+  },
+  {
+    title: "Full stack & ML side projects",
+    description:
+      "Shipping React/Node full-stack apps and ML-driven tools, including a BERT-powered semantic search engine.",
     icon: Code2,
   },
 ];
 
 export const achievements = [
   "Specialist at Codeforces with a maximum rating of 1418.",
-  "Global Rank 130 in CodeChef Starters 82 Division 3 among 9342 participants.",
-  "Winner of DSA Craft organized by MKSSS's Cummins College of Engineering.",
-  "Qualified for the finals of CODEFT Solutions coding competition at AIT Pune.",
-  "Shortlisted for ESSA scholarship for AY 2022-23 and 2023-24.",
+  "Achieved Global Rank 130 in CodeChef Starters 82 Division 3 among 9342 participants.",
+  "Winner of DSA Craft competition organized by MKSSS's Cummins College of Engineering.",
+  "Qualified for the Finals of CODEFT Solutions coding competition at AIT Pune.",
+  "Shortlisted for the Education Scholarship Scheme for Army Personnel (ESSA) for AY 2022–23 and 2023–24.",
 ];
 
 export const codingProfiles = [
@@ -267,34 +313,32 @@ export const socialLinks = [
 ];
 
 export const quickStats = [
-  { value: "10+", label: "Real-time projects" },
+  { value: "1+ Yrs", label: "Professional experience" },
+  { value: "30K", label: "TPS scale delivered" },
   { value: "1418", label: "Codeforces max rating" },
-  { value: "3★", label: "CodeChef rating" },
-  { value: "1621", label: "LeetCode rating" },
+  { value: "10+", label: "Real-time projects" },
 ];
 
 export const focusAreas = [
+  "Backend microservices",
+  "Java & Spring Boot",
+  "Distributed systems",
+  "System design",
+  "UPI & payment systems",
+  "REST & SOAP APIs",
+  "Oracle DB",
+  "Kafka",
+  "Docker & Kubernetes",
+  "Redis",
   "MERN stack development",
   "React frontends",
   "Node.js APIs",
-  "Express.js",
   "MongoDB",
   "Authentication",
   "Admin dashboards",
-  "Real-time project delivery",
-  "Payment systems",
-  "UPI transactions",
-  "Java microservices",
-  "Spring Boot",
-  "Eureka Server",
-  "API design",
-  "API validation",
-  "SOAP APIs",
-  "Postman testing",
-  "JFrog",
-  "NetBeans",
-  "Machine learning",
-  "Data structures",
+  "API validation & testing",
+  "AI-native development",
+  "Data structures & algorithms",
 ];
 
 export const cta = {
@@ -309,3 +353,19 @@ export const cta = {
     icon: Mail,
   },
 };
+
+export const serviceFlow = [
+  { label: "React UI", icon: Code2 },
+  { label: "REST / SOAP API", icon: NetworkIcon },
+  { label: "Java + Spring Boot", icon: Server },
+  { label: "Oracle DB / MongoDB", icon: Cpu },
+];
+
+export const terminalLines = [
+  "role: backend-focused-full-stack-developer",
+  "backend: java + spring-boot + microservices",
+  "frontend: react + responsive-ui",
+  "data: oracle-db + mongodb + redis",
+  "domain: payments + upi + distributed-systems",
+  "tools: postman + docker + kubernetes + kafka",
+];
