@@ -24,7 +24,8 @@ function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>{`${({"/": "Home", "/about": "About", "/projects": "Projects", "/contact": "Contact"})[router.pathname] || "Portfolio"} | Saurabh Kumar Singh`}</title>
+        <title>Saurabh Kumar Singh</title>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </Head>
       <Component {...pageProps} />
     </>
