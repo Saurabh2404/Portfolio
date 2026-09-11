@@ -41,7 +41,7 @@ html:not(.dark) .imported-hero a.bg-orange-500{color:#fff}
 .desktop-links>a{font-size:16px;transition:opacity .2s}
 .desktop-links>a:hover{opacity:.6}
 .desktop-links>a[aria-current]{text-decoration:underline;text-underline-offset:5px}
-.desktop-links .nav-contact{display:flex;align-items:center;gap:10px;background:var(--paper);padding:10px 16px;border-radius:99px}
+.desktop-links .nav-contact{display:flex;align-items:center;gap:10px;background:#f97316;color:#fff;padding:10px 16px;border-radius:99px}
 .nav-actions{display:flex;gap:8px}
 .nav-actions button{width:36px;height:36px;border-radius:50%;background:var(--paper);color:var(--ink);border:1px solid var(--line);display:grid;place-items:center;cursor:pointer}
 .nav-actions .menu-toggle{display:none}
@@ -62,9 +62,11 @@ html:not(.dark) .imported-hero a.bg-orange-500{color:#fff}
 .footer-actions{display:grid;gap:14px;justify-items:end}
 .footer-email,.footer-socials a{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:#f8fafc;color:#020617;font-weight:800;transition:transform .2s,border-color .2s,background .2s}
 .footer-email{min-width:190px;padding:14px 18px}
+.footer-email{background:#f97316;color:#fff;border-color:#f97316}
 .footer-socials{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px}
 .footer-socials a{min-width:118px;padding:11px 14px;background:rgba(255,255,255,.08);color:#f8fafc}
-.footer-email:hover,.footer-socials a:hover,.footer-email:focus-visible,.footer-socials a:focus-visible,.footer-email:active,.footer-socials a:active{transform:translateY(-3px);border-color:#fb923c;background:#ffedd5;color:#020617}
+.footer-email:hover,.footer-email:focus-visible,.footer-email:active{transform:translateY(-3px);border-color:#ea580c;background:#ea580c;color:#fff}
+.footer-socials a:hover,.footer-socials a:focus-visible,.footer-socials a:active{transform:translateY(-3px);border-color:#fb923c;background:#ffedd5;color:#020617}
 .footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:18px;width:min(1180px,calc(100% - 40px));margin-inline:auto;padding:15px 0;border-top:1px solid rgba(255,255,255,.1);color:#cbd5e1;font-size:13px}
 .footer-bottom span{display:inline-flex;align-items:center;gap:7px}
 
