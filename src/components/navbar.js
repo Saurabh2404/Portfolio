@@ -14,9 +14,9 @@ const mobileLinks = [
 
 export default function Navbar() {
   const router = useRouter();
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(true);
   const [open, setOpen] = useState(false);
-  useEffect(() => { const value = localStorage.getItem("theme") === "dark"; setDark(value); document.documentElement.classList.toggle("dark", value); }, []);
+  useEffect(() => { const savedTheme = localStorage.getItem("theme"); const value = savedTheme ? savedTheme === "dark" : true; setDark(value); document.documentElement.classList.toggle("dark", value); }, []);
   useEffect(() => { setOpen(false); }, [router.asPath]);
   useEffect(() => { const close = event => { if (event.key === "Escape") setOpen(false); }; window.addEventListener("keydown", close); return () => window.removeEventListener("keydown", close); }, []);
   const toggle = () => { const value = !dark; setDark(value); document.documentElement.classList.toggle("dark", value); localStorage.setItem("theme", value ? "dark" : "light"); };
