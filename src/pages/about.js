@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/navbar";
@@ -11,14 +10,12 @@ import AnimatedSection, {
 import {
   achievements,
   capabilities,
-  codingProfiles,
   currentWork,
-  focusAreas,
   profile,
   quickStats,
   skills,
 } from "@/data/portfolio";
-import { ArrowUpRight, CheckCircle2, Code2, Database, Layers3, Server } from "lucide-react";
+import { CheckCircle2, Code2, Database, Layers3, Server } from "lucide-react";
 
 export default function About() {
   return (
@@ -230,19 +227,6 @@ export default function About() {
               </StaggerItem>
             ))}
           </StaggerGroup>
-          <StaggerGroup className="mt-8 flex flex-wrap gap-3" amount={0.05} stagger={0.03}>
-            {focusAreas.slice(0, 16).map((area) => (
-              <StaggerItem
-                key={area}
-                as="span"
-                whileHover={{ y: -3 }}
-                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-bold text-slate-700 dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-200"
-              >
-                <CheckCircle2 size={16} className="text-orange-500" />
-                {area}
-              </StaggerItem>
-            ))}
-          </StaggerGroup>
           </div>
         </section>
 
@@ -264,35 +248,6 @@ export default function About() {
                   <p className="text-sm font-semibold leading-6 text-slate-700 dark:text-slate-200">
                     {achievement}
                   </p>
-                </StaggerItem>
-              ))}
-            </StaggerGroup>
-          </div>
-        </AnimatedSection>
-
-        <AnimatedSection direction="scale" className="mx-auto max-w-7xl px-5 pb-16 sm:px-6 lg:px-8">
-          <div className="rounded-[2rem] bg-slate-950 p-8 text-white dark:bg-white dark:text-slate-950">
-            <div className="mb-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-300 dark:text-orange-600">
-                Coding Profiles
-              </p>
-              <h2 className="mt-3 text-3xl font-black">Practice and proof.</h2>
-            </div>
-            <StaggerGroup className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4" amount={0.1}>
-              {codingProfiles.map(({ name, link, icon: Icon, color }) => (
-                <StaggerItem key={name} as="div" whileHover={{ y: -4 }}>
-                  <Link
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-between rounded-2xl bg-white/10 p-4 transition hover:bg-white/15 dark:bg-slate-100 dark:hover:bg-orange-100"
-                  >
-                    <span className="flex items-center gap-3 font-bold">
-                      <Icon size={24} className={color} />
-                      {name}
-                    </span>
-                    <ArrowUpRight size={17} />
-                  </Link>
                 </StaggerItem>
               ))}
             </StaggerGroup>

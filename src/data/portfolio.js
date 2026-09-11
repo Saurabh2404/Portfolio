@@ -37,6 +37,7 @@ import {
   SiCplusplus,
   SiDocker,
   SiExpress,
+  SiGeeksforgeeks,
   SiHackerrank,
   SiJfrog,
   SiKubernetes,
@@ -274,10 +275,90 @@ export const codingProfiles = [
   {
     name: "HackerRank",
     icon: SiHackerrank,
-    link: "https://www.hackerrank.com/profile/saurabh2404",
+    link: "https://www.hackerrank.com/profile/saurabh2196991",
     color: "text-green-500",
   },
+  {
+    name: "Code360",
+    platform: "codestudio",
+    icon: Code2,
+    link: "https://www.naukri.com/code360/profile/Saurabh2404",
+    color: "text-indigo-500",
+  },
+  {
+    name: "GeeksforGeeks",
+    platform: "geeksforgeeks",
+    icon: SiGeeksforgeeks,
+    link: "https://www.geeksforgeeks.org/profile/saurabh2ock3?tab=activity",
+    color: "text-emerald-600",
+  },
+  {
+    name: "Codolio",
+    platform: "codolio",
+    icon: Award,
+    link: "https://codolio.com/profile/RapidSaurabh",
+    color: "text-orange-500",
+  },
 ];
+
+export const proofOfWork = {
+  source: "snapshot",
+  sourceLabel: "Codolio snapshot",
+  codolioHandle: "RapidSaurabh",
+  updatedFrom: "Codolio profile snapshot",
+  headline:
+    "A consolidated view of coding practice, contest participation, and verified platform activity.",
+  stats: [
+    { label: "Questions Solved", value: "1791", note: "Across connected coding platforms" },
+    { label: "Active Days", value: "255", note: "Consistency tracked on Codolio" },
+    { label: "Contests Attended", value: "61", note: "Competitive programming participation" },
+    { label: "C-Score Rank", value: "2039", note: "Global rank based on Codolio C-Score" },
+  ],
+  distributions: [
+    {
+      title: "Fundamentals",
+      total: "197",
+      color: "bg-blue-500",
+      items: [
+        { label: "GFG Basic", value: 7 },
+        { label: "HackerRank", value: 190 },
+      ],
+    },
+    {
+      title: "DSA",
+      total: "1124",
+      color: "bg-emerald-500",
+      items: [
+        { label: "Easy", value: 437 },
+        { label: "Medium", value: 601 },
+        { label: "Hard", value: 86 },
+      ],
+    },
+    {
+      title: "Competitive Programming",
+      total: "470",
+      color: "bg-orange-500",
+      items: [
+        { label: "CodeChef", value: 325 },
+        { label: "Codeforces", value: 145 },
+      ],
+    },
+  ],
+  rankings: [
+    { platform: "LeetCode", value: "1612", note: "max: 1620" },
+    { platform: "CodeChef", value: "1690", note: "max: 1690" },
+    { platform: "Codeforces", value: "1331", note: "Pupil, max: 1418" },
+    { platform: "CodeStudio", value: "1687", note: "Achiever" },
+  ],
+  topicAnalysis: [
+    { label: "Arrays", value: 353 },
+    { label: "Algorithms", value: 232 },
+    { label: "HashMap and Set", value: 122 },
+    { label: "Dynamic Programming", value: 116 },
+    { label: "Trees", value: 96 },
+    { label: "Sorting", value: 85 },
+  ],
+};
 
 export const socialLinks = [
   {
