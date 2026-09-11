@@ -20,7 +20,7 @@ export default function Timeline() {
 function TimelineRow({ item, index }) {
   const Icon = item.icon;
   const isEven = index % 2 === 0;
-  const fromSide = isEven ? -40 : 40;
+  const fromSide = isEven ? -18 : 18;
 
   return (
     <div className="relative grid gap-4 pl-16 md:grid-cols-2 md:gap-0 md:pl-0">

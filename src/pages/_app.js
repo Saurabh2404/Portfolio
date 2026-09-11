@@ -1,5 +1,4 @@
 import "@/styles/globals.css"
-import { ContextProvider } from "../context/context"
 import { useEffect } from "react"
 import { useRouter } from "next/router"
 import Head from "next/head"
@@ -23,12 +22,12 @@ function App({ Component, pageProps }) {
   }, [router.pathname])
 
   return (
-    <ContextProvider>
+    <>
       <Head>
         <title>{`${({"/": "Home", "/about": "About", "/projects": "Projects", "/contact": "Contact"})[router.pathname] || "Portfolio"} | Saurabh Kumar Singh`}</title>
       </Head>
       <Component {...pageProps} />
-    </ContextProvider>
+    </>
   )
 }
 
