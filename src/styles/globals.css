@@ -45,9 +45,13 @@ html:not(.dark) .imported-hero a.bg-orange-500{color:#fff}
 .nav-actions{display:flex;gap:8px}
 .nav-actions button{width:36px;height:36px;border-radius:50%;background:var(--paper);color:var(--ink);border:1px solid var(--line);display:grid;place-items:center;cursor:pointer}
 .nav-actions .menu-toggle{display:none}
-.mobile-nav{position:absolute;top:70px;left:20px;right:20px;padding:22px;background:var(--paper);border:1px solid var(--line);border-radius:8px;box-shadow:0 20px 40px #0002}
-.mobile-nav a{display:flex;gap:20px;font-size:28px;padding:14px 0}
-.mobile-nav small{font:12px "JetBrains Mono",monospace}
+.mobile-nav{position:absolute;top:76px;left:14px;right:14px;padding:10px;background:rgba(255,249,241,.94);border:1px solid rgba(148,163,184,.32);border-radius:22px;box-shadow:0 24px 70px rgba(15,23,42,.22);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px)}
+.dark .mobile-nav{background:rgba(2,6,23,.94);border-color:rgba(255,255,255,.12);box-shadow:0 24px 70px rgba(0,0,0,.38)}
+.mobile-nav a{display:flex;align-items:center;gap:12px;min-height:54px;padding:10px 12px;border-radius:16px;color:var(--ink);font-size:16px;font-weight:800}
+.mobile-nav a:hover,.mobile-nav a:focus-visible,.mobile-nav a[aria-current="page"]{background:rgba(249,115,22,.12);color:#c2410c}
+.dark .mobile-nav a:hover,.dark .mobile-nav a:focus-visible,.dark .mobile-nav a[aria-current="page"]{background:rgba(251,146,60,.14);color:#fdba74}
+.mobile-nav-icon{display:grid;place-items:center;width:34px;height:34px;flex:0 0 34px;border-radius:12px;background:rgba(15,23,42,.07);color:#c2410c}
+.dark .mobile-nav-icon{background:rgba(255,255,255,.08);color:#fdba74}
 
 .editorial-footer{padding:0;background:#020617;color:#f8fafc}
 .footer-shell{width:100%;overflow:hidden;border-top:1px solid rgba(255,255,255,.12);background:radial-gradient(circle at 82% 20%,rgba(251,146,60,.22),transparent 34%),linear-gradient(135deg,#0f172a,#111827 52%,#271514);box-shadow:0 -24px 80px rgba(0,0,0,.22)}
