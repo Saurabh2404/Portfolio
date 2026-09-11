@@ -20,7 +20,6 @@ import {
   quickStats,
   serviceFlow,
   skills,
-  socialLinks,
   terminalLines,
 } from "@/data/portfolio";
 import {
@@ -70,9 +69,9 @@ export default function Home() {
 
           <div className="relative mx-auto grid max-w-[96rem] gap-10 px-4 py-10 
             sm:px-6 sm:py-14 
-            lg:grid-cols-2 lg:items-start lg:gap-16 lg:px-8 lg:py-16 
-            xl:grid-cols-[1.2fr_1fr] 
-            2xl:max-w-[100rem]">
+            lg:grid-cols-[minmax(0,1fr)_minmax(500px,0.78fr)] lg:items-start lg:gap-20 lg:px-10 lg:py-16
+            xl:max-w-[106rem] xl:grid-cols-[minmax(0,0.98fr)_minmax(560px,0.76fr)] xl:gap-28
+            2xl:max-w-[112rem] 2xl:gap-36">
 
             {/* LEFT */}
             <div className="min-w-0">
@@ -160,7 +159,7 @@ export default function Home() {
             </div>
 
             {/* RIGHT */}
-            <div className="grid w-full min-w-0 max-w-full gap-4 lg:max-w-[560px]">
+            <div className="grid w-full min-w-0 max-w-full gap-4 lg:max-w-[620px] lg:justify-self-end 2xl:max-w-[650px]">
               <motion.div
                 initial={{ opacity: 0, x: 40 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -446,43 +445,6 @@ export default function Home() {
           </StaggerGroup>
         </section>
 
-        <AnimatedSection
-          direction="scale"
-          className="mx-auto max-w-7xl px-5 pb-16 sm:px-6 lg:px-8"
-        >
-          <div className="rounded-[2rem] bg-slate-950 p-8 text-white shadow-2xl shadow-slate-300/60 md:p-10 dark:bg-white dark:text-slate-950 dark:shadow-black/30">
-            <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-300 dark:text-orange-600">
-                  Let&apos;s Connect
-                </p>
-                <h2 className="mt-3 text-3xl font-black md:text-4xl">
-                  Have a project, role, or technical challenge in mind?
-                </h2>
-                <p className="mt-3 max-w-2xl text-slate-300 dark:text-slate-600">
-                  I am open to meaningful engineering conversations around
-                  Java full-stack apps, backend microservices, APIs,
-                  payments, dashboards, and practical product development.
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-3">
-                {socialLinks.slice(0, 3).map(({ label, href, icon: Icon }) => (
-                  <motion.div key={label} whileHover={{ y: -4 }}>
-                    <Link
-                      href={href}
-                      target={href.startsWith("http") ? "_blank" : undefined}
-                      rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-                      className="inline-flex items-center gap-2 rounded-xl bg-white px-4 py-3 text-sm font-bold text-slate-950 transition hover:bg-orange-200 dark:bg-slate-950 dark:text-white"
-                    >
-                      <Icon size={17} />
-                      {label}
-                    </Link>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </AnimatedSection>
       </main>
 
       <Footer />
