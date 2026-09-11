@@ -35,11 +35,11 @@ export default function About() {
             <div className="relative rounded-[2rem] border border-white bg-white p-5 shadow-2xl shadow-slate-300/60 dark:border-white/10 dark:bg-white/10 dark:shadow-black/40">
               <div className="relative mx-auto aspect-square w-full max-w-[18rem] overflow-hidden rounded-full border-8 border-slate-50 bg-slate-200 shadow-xl shadow-slate-200/70 dark:border-white/10 dark:shadow-black/30">
                 <Image
-                  src="/SRV_PIC.jpeg"
+                  src="/SRV_PIC.png"
                   alt="Saurabh Kumar Singh"
                   fill
                   sizes="(max-width: 768px) 70vw, 288px"
-                  className="object-cover object-[center_18%]"
+                  className="object-cover object-[center_55%]"
                   priority
                 />
               </div>
