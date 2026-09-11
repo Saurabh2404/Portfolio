@@ -32,14 +32,14 @@ export default function About() {
             className="relative mx-auto w-full max-w-sm"
           >
             <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-orange-200 via-cyan-100 to-emerald-100 blur-2xl dark:from-orange-500/20 dark:via-cyan-500/10 dark:to-emerald-500/10" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-white bg-white p-3 shadow-2xl shadow-slate-300/60 dark:border-white/10 dark:bg-white/10 dark:shadow-black/40">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-slate-200">
+            <div className="relative rounded-[2rem] border border-white bg-white p-5 shadow-2xl shadow-slate-300/60 dark:border-white/10 dark:bg-white/10 dark:shadow-black/40">
+              <div className="relative mx-auto aspect-square w-full max-w-[18rem] overflow-hidden rounded-full border-8 border-slate-50 bg-slate-200 shadow-xl shadow-slate-200/70 dark:border-white/10 dark:shadow-black/30">
                 <Image
-                  src="/saurabh.jpg"
+                  src="/SRV_PIC.jpeg"
                   alt="Saurabh Kumar Singh"
                   fill
-                  sizes="(max-width: 768px) 90vw, 360px"
-                  className="object-cover"
+                  sizes="(max-width: 768px) 70vw, 288px"
+                  className="object-cover object-[center_18%]"
                   priority
                 />
               </div>
