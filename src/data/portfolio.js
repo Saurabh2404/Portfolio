@@ -51,7 +51,7 @@ export const profile = {
   name: "Saurabh Kumar",
   fullName: "Saurabh Kumar Singh",
   role: "Software Engineer",
-  headline: "Backend-Focused Full Stack Developer | Java, Spring Boot, MERN, Microservices",
+  headline: "Full Stack Developer | Java, Spring Boot, MERN, Microservices",
   location: "Pune, India",
   email: "rapidsaurabh3104@gmail.com",
   phone: "+916205809317",

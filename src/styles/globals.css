@@ -5,7 +5,8 @@
 
 /* Shared styles required by the imported portfolio pages. */
 .updated-portfolio{overflow-x:clip}
-.updated-portfolio .site-nav{position:relative;top:0;height:106px}
+.updated-portfolio .site-nav{position:sticky;top:0;height:82px;background:rgba(248,250,252,.82);border-bottom:1px solid rgba(148,163,184,.22);box-shadow:0 16px 40px rgba(15,23,42,.08);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);z-index:100}
+.dark .updated-portfolio .site-nav{background:rgba(2,6,23,.78);border-bottom-color:rgba(255,255,255,.1);box-shadow:0 16px 40px rgba(0,0,0,.28)}
 .updated-portfolio .imported-hero{isolation:isolate}
 html:not(.dark) .imported-hero{background:#f1f5f9;color:#0f172a}
 html:not(.dark) .imported-hero .text-white{color:#0f172a}

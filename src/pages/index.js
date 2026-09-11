@@ -31,7 +31,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-const typedRole = "Backend-Focused Full Stack Developer";
+const typedRole = "Full Stack Developer";
 
 export default function Home() {
   const PrimaryIcon = cta.primary.icon;
