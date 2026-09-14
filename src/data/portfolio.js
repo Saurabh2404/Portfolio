@@ -153,7 +153,7 @@ export const skills = [
 export const timeline = [
   {
     type: "work",
-    title: "Associate Consultant",
+    title: "Software Engineer",
     org: "Oracle Financial Services Software Limited",
     duration: "July 2025 – Present",
     location: "Pune, Maharashtra",
